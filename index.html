@@ -3,47 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pagina informativa su Chernobyl e il disastro nucleare del 1986">
-    <title>Chernobyl - Il Disastro Nucleare del 1986</title>
+    <title>Chernobyl: The Forgotten City</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Chernobyl - Il Disastro Nucleare del 1986</h1>
-        <nav>
-            <ul>
-                <li><a href="#intro">Introduzione</a></li>
-                <li><a href="#eventi">Gli Eventi</a></li>
-                <li><a href="#conseguenze">Le Conseguenze</a></li>
-                <li><a href="#visitare">Visitare Chernobyl</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="intro">
-        <h2>Introduzione</h2>
-        <p>Il disastro di Chernobyl è uno degli incidenti nucleari più gravi della storia. Si è verificato il 26 aprile 1986 presso la centrale nucleare di Chernobyl, in Ucraina, causando un'enorme contaminazione radioattiva e costringendo all'evacuazione di oltre 100.000 persone.</p>
-        <img src="chernobyl.jpg" alt="Immagine della centrale nucleare di Chernobyl" width="600">
+    <div class="parallax">
+        <div class="layer layer-1"></div>
+        <div class="layer layer-2"></div>
+        <div class="layer layer-3"></div>
+    </div>
+    
+    <section class="content">
+        <h1 class="glitch">Chernobyl: La Città Fantasma</h1>
+        <p>Il 26 aprile 1986, il reattore numero 4 esplose. Oggi, la città è un monito silenzioso del pericolo nucleare.</p>
+        
+        <div class="grid-container">
+            <div class="grid-item">Esplosione</div>
+            <div class="grid-item">Evacuazione</div>
+            <div class="grid-item">Zona di esclusione</div>
+        </div>
     </section>
-
-    <section id="eventi">
-        <h2>Gli Eventi</h2>
-        <p>Il disastro avvenne durante un test di sicurezza che fallì, causando una serie di esplosioni. Il reattore 4 della centrale nucleare esplose, rilasciando una massiccia quantità di radiazioni nell'ambiente circostante. La città di Pripyat, che ospitava i lavoratori della centrale, fu evacuata solo 36 ore dopo l'incidente.</p>
-    </section>
-
-    <section id="conseguenze">
-        <h2>Le Conseguenze</h2>
-        <p>Il disastro di Chernobyl ha avuto gravi conseguenze per la salute e l'ambiente. Migliaia di persone sono state colpite da malattie legate alla radiazione, e vasti territori sono diventati inabitabili a causa della contaminazione. L'incidente ha anche sollevato importanti questioni sulla sicurezza delle centrali nucleari a livello globale.</p>
-    </section>
-
-    <section id="visitare">
-        <h2>Visitare Chernobyl</h2>
-        <p>Oggi, la zona di esclusione di Chernobyl è una destinazione per i turisti, ma solo con tour guidati autorizzati. La visita offre uno spunto di riflessione sulle tragedie del passato e sulla resilienza della natura che sta lentamente riprendendo il controllo sui territori contaminati.</p>
-        <a href="https://it.wikipedia.org/wiki/Chernobyl" target="_blank">Scopri di più su Wikipedia</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Chernobyl - Informazioni storiche e educative. Tutti i diritti riservati.</p>
-    </footer>
+    
+    <footer>© 2024 Chernobyl Project</footer>
+    
+    <script>
+        gsap.from(".layer-1", { duration: 2, y: "-50%", ease: "power2.out" });
+        gsap.from(".layer-2", { duration: 3, y: "50%", ease: "power3.out" });
+        gsap.from(".glitch", { duration: 1.5, opacity: 0, repeat: -1, yoyo: true, ease: "steps(5)" });
+    </script>
 </body>
 </html>
