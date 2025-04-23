@@ -1,36 +1,240 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chernobyl: The Forgotten City</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>Chernobyl - Storia e Conseguenze</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="parallax">
-        <div class="layer layer-1"></div>
-        <div class="layer layer-2"></div>
-        <div class="layer layer-3"></div>
-    </div>
-    
-    <section class="content">
-        <h1 class="glitch">Chernobyl: La Città Fantasma</h1>
-        <p>Il 26 aprile 1986, il reattore numero 4 esplose. Oggi, la città è un monito silenzioso del pericolo nucleare.</p>
-        
-        <div class="grid-container">
-            <div class="grid-item">Esplosione</div>
-            <div class="grid-item">Evacuazione</div>
-            <div class="grid-item">Zona di esclusione</div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>CHERNOBYL</h1>
+                <p>26 aprile 1986</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#event">L'Evento</a></li>
+                    <li><a href="#consequences">Conseguenze</a></li>
+                    <li><a href="#gallery">Galleria</a></li>
+                    <li><a href="#today">Oggi</a></li>
+                    <li><a href="#resources">Risorse</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
         </div>
-    </section>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Il peggior disastro nucleare della storia</h2>
+                <p>Esploriamo insieme cosa accadde quella notte e quali furono le conseguenze per il mondo intero.</p>
+                <a href="#event" class="btn">Scopri di più</a>
+            </div>
+            <div class="radiation-counter">
+                <div class="counter-display">
+                    <span id="radiation-value">0</span>
+                    <span class="unit">μSv</span>
+                </div>
+                <p>Livello di radiazioni simulato</p>
+            </div>
+        
     
-    <footer>© 2024 Chernobyl Project</footer>
-    
-    <script>
-        gsap.from(".layer-1", { duration: 2, y: "-50%", ease: "power2.out" });
-        gsap.from(".layer-2", { duration: 3, y: "50%", ease: "power3.out" });
-        gsap.from(".glitch", { duration: 1.5, opacity: 0, repeat: -1, yoyo: true, ease: "steps(5)" });
-    </script>
+        </section>
+
+        <section id="event" class="section-dark">
+            <div class="container">
+                <h2 class="section-title">L'Incidente</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">25 aprile 1986</div>
+                        <div class="timeline-content">
+                            <h3>Inizio del test di sicurezza</h3>
+                            <p>Il personale della centrale inizia un test per verificare quanto tempo le turbine avrebbero continuato a fornire energia elettrica in caso di perdita di potenza.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">01:23:04</div>
+                        <div class="timeline-content">
+                            <h3>Esplosione</h3>
+                            <p>Un improvviso aumento di potenza provoca la rottura del reattore 4, causando due potenti esplosioni che distruggono il tetto dell'edificio.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">26 aprile</div>
+                        <div class="timeline-content">
+                            <h3>Evacuazione di Pripyat</h3>
+                            <p>Dopo 36 ore dall'incidente, inizia l'evacuazione dei 49.000 abitanti di Pripyat. Verranno informati che si tratta di una misura temporanea.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reactor-diagram">
+                    
+                    <div class="diagram-overlay" id="diagram-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consequences" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Conseguenze</h2>
+                <div class="consequences-grid">
+                    <div class="consequence-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Impatto Umano</h3>
+                        <p>31 morti diretti, migliaia di casi di cancro alla tiroide e aumento dei difetti congeniti nelle aree colpite.</p>
+                    </div>
+                    <div class="consequence-card">
+                        <i class="fas fa-globe-europe"></i>
+                        <h3>Contaminazione</h3>
+                        <p>Nube radioattiva che raggiunge gran parte d'Europa, con particolari effetti su Bielorussia, Ucraina e Russia.</p>
+                    </div>
+                    <div class="consequence-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Ambiente</h3>
+                        <p>Creazione della "Zona di esclusione" di 30km, dove la natura si è ripresa senza presenza umana.</p>
+                    </div>
+                   
+                </div>
+                <div class="radiation-map">
+                    <h3>Diffusione della contaminazione</h3>
+                    <div class="map-container">
+                        <img src="image/img1.webp" alt="Mappa della contaminazione">
+                        <div class="map-legend">
+                            <div class="legend-item"><span class="color-box" style="background-color: #ff0000;"></span> Alto</div>
+                            <div class="legend-item"><span class="color-box" style="background-color: #ff9900;"></span> Medio</div>
+                            <div class="legend-item"><span class="color-box" style="background-color: #ffff00;"></span> Basso</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-dark">
+            <div class="container">
+                <h2 class="section-title">Galleria</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="image/rea.jfif" alt="Reattore di Chernobyl">
+                        <div class="gallery-caption">Il reattore 4 dopo l'incidente</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/parco.jfif" alt="Parco divertimenti di Pripyat">
+                        <div class="gallery-caption">Parco divertimenti di Pripyat, mai utilizzato</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/sarcofago.jpg" alt="Nuovo sarcofago">
+                        <div class="gallery-caption">Nuovo sarcofago in costruzione</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/piazza.jfif" alt="Piazza centrale di Pripyat">
+                        <div class="gallery-caption">Piazza centrale di Pripyat oggi</div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+
+        <section id="today" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Chernobyl Oggi</h2>
+                <div class="today-content">
+                    <div class="today-text">
+                        <p>Oggi, Chernobyl è diventata un luogo di studio scientifico e turismo estremo. La zona di esclusione, sebbene ancora altamente contaminata in alcune aree, ha visto un'inaspettata rinascita della fauna selvatica.</p>
+                        <p>Nel 2016 è stato completato il "New Safe Confinement", una gigantesca struttura d'acciaio che copre il vecchio sarcofago per prevenire ulteriori fughe di materiale radioattivo.</p>
+                        <div class="facts">
+                            <h3>Curiosità:</h3>
+                            <ul>
+                                <li>Alcuni residenti anziani sono tornati illegalmente nelle loro case</li>
+                                <li>La foresta rossa deve il nome al colore assunto dai pini dopo l'incidente</li>
+                                <li>Il reattore 3 ha continuato a funzionare fino al 2000</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="today-image">
+                        <img src="image/new.jfif" alt="New Safe Confinement">
+                        <div class="image-caption">Il New Safe Confinement completato nel 2016</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="section-dark">
+            <div class="container">
+                <h2 class="section-title">Risorse</h2>
+                <div class="resources-content">
+                    <div class="resources-list">
+                        <h3>Documentari</h3>
+                        <ul>
+                            <li><a href="https://www.imdb.com/title/tt7366338/" target="_blank">Chernobyl (HBO Miniseries)</a></li>
+                            <li><a href="https://www.imdb.com/title/tt0463854/" target="_blank">The Battle of Chernobyl</a></li>
+                            <li><a href="https://www.imdb.com/title/tt1936768/" target="_blank">Chernobyl Heart</a></li>
+                        </ul>
+                        <h3>Libri</h3>
+                        <ul>
+                            <li>Voices from Chernobyl - Svetlana Alexievich</li>
+                            <li>Chernobyl 01:23:40 - Andrew Leatherbarrow</li>
+                            <li>Midnight in Chernobyl - Adam Higginbotham</li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <h3>Rimani aggiornato</h3>
+                        <p>Iscriviti alla nostra newsletter per ricevere aggiornamenti sulle ultime ricerche e notizie su Chernobyl.</p>
+                        <form id="newsletter-form">
+                            <input type="email" placeholder="La tua email" required>
+                            <button type="submit" class="btn">Iscriviti</button>
+                        </form>
+                        <div id="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Informazioni</h3>
+                    <p>Questo sito è stato creato a scopo educativo per documentare il disastro di Chernobyl e le sue conseguenze.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link utili</h3>
+                    <ul>
+                        <li><a href="https://www.iaea.org/" target="_blank">IAEA</a></li>
+                        <li><a href="https://www.who.int/" target="_blank">OMS</a></li>
+                        <li><a href="https://www.chernobylmuseum.ua/" target="_blank">Museo di Chernobyl</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>Per informazioni o collaborazioni:</p>
+                    <p>info@chernobyl-educazione.it</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Sito Informativo su Chernobyl. Tutti i diritti riservati.</p>
+                <p>Nota: Questo sito non è affiliato con nessuna organizzazione ufficiale.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Torna su"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
 </body>
 </html>
